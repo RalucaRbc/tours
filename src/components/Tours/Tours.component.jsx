@@ -1,7 +1,7 @@
 import React from "react";
 import { Tour } from "../Tour/Tour.component";
 
-export const Tours = ({ tours }) => {
+export const Tours = ({ tours, removeTour }) => {
   return (
     <section>
       <div className="title">
@@ -10,7 +10,7 @@ export const Tours = ({ tours }) => {
       </div>
       <div>
         {tours.map((tour) => (
-          <Tour key={tour.id} {...tour } />
+          <Tour key={tour.id} {...tour } removeTour={removeTour} />
         ))}
       </div>
     </section>
